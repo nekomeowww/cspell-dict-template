@@ -1,0 +1,55 @@
+{
+  "name": "@example-org/cspell-dict",
+  "type": "module",
+  "version": "1.3.1",
+  "packageManager": "pnpm@9.14.2",
+  "description": "Example Org Terms dictionary for cSpell.",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Example Org",
+    "email": "maintainers@example.org",
+    "url": "https://github.com/example-org"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/example-org/cspell-dicts/blob/main/#readme",
+  "repository": "git+https://github.com/example-org/cspell-dict.git",
+  "bugs": {
+    "url": "https://github.com/example-org/cspell-dicts/issues"
+  },
+  "keywords": [
+    "cspell",
+    "dictionary",
+    "spelling",
+    "example-org"
+  ],
+  "exports": {
+    ".": "./cspell-ext.json",
+    "./cspell": "./cspell-ext.json",
+    "./cspell-ext.json": "./cspell-ext.json"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "cspell-ext.json",
+    "example-dict.trie.gz",
+    "package.json"
+  ],
+  "scripts": {
+    "gz": "cspell-tools-cli gzip \"*.trie\"",
+    "prepare:dictionary": "pnpm gz",
+    "build": "cspell-tools-cli build && pnpm gz",
+    "conditional-build": "cspell-tools-cli build --conditional && pnpm gz",
+    "test": "shx head -n 1000 \"src/example-dict.dic.txt\" | cspell -c ./cspell-ext.json --locale=en --languageId=* stdin"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.27.3",
+    "@cspell/cspell-tools": "^8.16.1",
+    "bumpp": "^9.8.1",
+    "cspell": "^8.16.1",
+    "eslint": "^8.57.1",
+    "gz": "^0.0.0",
+    "shx": "^0.3.4"
+  }
+}

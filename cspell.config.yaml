@@ -1,0 +1,17 @@
+version: "0.2"
+ignorePaths:
+  - "**/*.tire"
+dictionaryDefinitions:
+  - name: example-dict
+    path: ./src/example-dict.dic.txt
+    addWords: true
+dictionaries:
+  - example-dict
+words:
+  - antfu
+  - bumpp
+  - mdash
+  - Neko
+  - Ayaka
+ignoreWords: []
+import: []

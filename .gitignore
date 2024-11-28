@@ -1,0 +1,17 @@
+.Trash/
+.trash/
+.DS_Store
+**/.obsidian/
+
+.idea
+.temp
+*.local
+*.log
+dist
+node_modules
+.eslintcache
+coverage/
+
+*.gz
+*.trie.gz
+*.trie

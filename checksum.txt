@@ -1,0 +1,2 @@
+be24a12b9a11b236bc14297c2dfc4f29a77e83e1  example-dict-id.trie
+e3db036681fe420828848d1f521a5febf8f3b8e3  src/example-dict.dic.txt
