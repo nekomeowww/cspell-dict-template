@@ -45,9 +45,9 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.0.0",
-    "@cspell/cspell-tools": "^8.16.1",
+    "@cspell/cspell-tools": "^9.0.0",
     "bumpp": "^10.0.0",
-    "cspell": "^8.16.1",
+    "cspell": "^9.0.0",
     "eslint": "^9.0.0",
     "gz": "^0.0.0",
     "shx": "^0.4.0"
